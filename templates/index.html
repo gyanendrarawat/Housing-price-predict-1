@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Housing Price Predictor<span class="badge bg-success">Pro</span></span>
+        </div>
+    </nav>
+
+    <div class='d-flex justify-content-center mt-4'>
+        <div class="w-50 p-3">
+            <div class="card text-center">
+
+                <div class="card-header  text-light bg-dark ">
+                    Fastest and Accurate Price Predictor
+                </div>
+            
+                <div class="card-body border border-secondary">
+
+                    <form action="{{url_for('predict')}}" method="post">
+
+                        <div class='col-7'>
+
+                            <div class="form-group row">
+                                <input type="number" class="form-control" name="id1"
+                                    placeholder="Enter Avg. Area Income" required='required'>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <input type="number" class="form-control" name="id2"
+                                    placeholder="Enter Avg. Area House Age" required='required'>
+                            </div>
+
+                            <div class="form-group row">
+                                <input type="number" class="form-control" name="id3"
+                                    placeholder="Enter Avg. Area Number of Rooms" required='required'>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <input type="number" class="form-control" name="id4"
+                                    placeholder="Avg. Area Number of Bedrooms" required='required'>
+                            </div>
+
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-secondary">Predict</button>
+                    </form>
+
+                </div>
+                <div class="card-footer text-muted border border-secondary">
+                    {{prediction_text}}
+                </div>
+
+            </div>
+            
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
